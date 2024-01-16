@@ -1,0 +1,708 @@
+2024-01-14 16:08:32,844 p=94442 u=assistent n=ansible | PLAY [First lesson] ************************************************************
+2024-01-14 16:08:32,889 p=94442 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 16:08:37,005 p=94442 u=assistent n=ansible | ok: [localhost]
+2024-01-14 16:08:37,046 p=94442 u=assistent n=ansible | TASK [pwd to file] *************************************************************
+2024-01-14 16:08:37,729 p=94442 u=assistent n=ansible | changed: [localhost]
+2024-01-14 16:08:37,808 p=94442 u=assistent n=ansible | TASK [ls to file] **************************************************************
+2024-01-14 16:08:38,286 p=94442 u=assistent n=ansible | changed: [localhost]
+2024-01-14 16:08:38,294 p=94442 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 16:08:38,304 p=94442 u=assistent n=ansible | localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 16:09:39,141 p=94621 u=assistent n=ansible | PLAY [First lesson] ************************************************************
+2024-01-14 16:09:39,201 p=94621 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 16:09:43,783 p=94621 u=assistent n=ansible | ok: [app2]
+2024-01-14 16:09:43,789 p=94621 u=assistent n=ansible | ok: [app1]
+2024-01-14 16:09:43,838 p=94621 u=assistent n=ansible | TASK [pwd to file] *************************************************************
+2024-01-14 16:09:44,957 p=94621 u=assistent n=ansible | changed: [app2]
+2024-01-14 16:09:45,013 p=94621 u=assistent n=ansible | changed: [app1]
+2024-01-14 16:09:45,059 p=94621 u=assistent n=ansible | TASK [ls to file] **************************************************************
+2024-01-14 16:09:46,014 p=94621 u=assistent n=ansible | changed: [app2]
+2024-01-14 16:09:46,022 p=94621 u=assistent n=ansible | changed: [app1]
+2024-01-14 16:09:46,042 p=94621 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 16:09:46,043 p=94621 u=assistent n=ansible | app1                       : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 16:09:46,043 p=94621 u=assistent n=ansible | app2                       : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:01:02,166 p=96501 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:01:02,195 p=96501 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:01:02,435 p=96501 u=assistent n=ansible | fatal: [app1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: login@192.168.31.126: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:01:02,495 p=96501 u=assistent n=ansible | fatal: [app2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: login@192.168.31.125: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:01:03,184 p=96501 u=assistent n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
+2024-01-14 18:01:03,189 p=96501 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:01:03,189 p=96501 u=assistent n=ansible | app1                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:01:03,190 p=96501 u=assistent n=ansible | app2                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:01:03,190 p=96501 u=assistent n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:01:15,899 p=96568 u=assistent n=ansible | localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-14 18:01:16,774 p=96568 u=assistent n=ansible | app2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-14 18:01:16,778 p=96568 u=assistent n=ansible | app1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-14 18:01:21,373 p=96656 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:01:21,416 p=96656 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:01:21,641 p=96656 u=assistent n=ansible | fatal: [app1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: login@192.168.31.126: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:01:21,673 p=96656 u=assistent n=ansible | fatal: [app2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: login@192.168.31.125: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:01:22,338 p=96656 u=assistent n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
+2024-01-14 18:01:22,343 p=96656 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:01:22,343 p=96656 u=assistent n=ansible | app1                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:01:22,344 p=96656 u=assistent n=ansible | app2                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:01:22,344 p=96656 u=assistent n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:02:00,246 p=96721 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:02:00,295 p=96721 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:02:00,518 p=96721 u=assistent n=ansible | fatal: [app1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.31.126: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:02:00,543 p=96721 u=assistent n=ansible | fatal: [app2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.31.125: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:02:01,209 p=96721 u=assistent n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
+2024-01-14 18:02:01,214 p=96721 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:02:01,214 p=96721 u=assistent n=ansible | app1                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:02:01,214 p=96721 u=assistent n=ansible | app2                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:02:01,214 p=96721 u=assistent n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:02:45,083 p=96802 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:02:45,130 p=96802 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:02:45,337 p=96802 u=assistent n=ansible | fatal: [app1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.31.126: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:02:45,395 p=96802 u=assistent n=ansible | fatal: [app2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.31.125: Permission denied (publickey,password).", "unreachable": true}
+2024-01-14 18:02:47,052 p=96802 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:02:47,094 p=96802 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 18:02:50,645 p=96802 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:02:50,680 p=96802 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 18:02:51,432 p=96802 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:02:51,466 p=96802 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 18:02:52,674 p=96802 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:02:52,699 p=96802 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 18:02:53,523 p=96802 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:02:53,561 p=96802 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 18:02:54,279 p=96802 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:02:54,311 p=96802 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 18:02:54,422 p=96802 u=assistent n=ansible | fatal: [localhost]: FAILED! => {"msg": "The conditional check 'disable_default' failed. The error was: error while evaluating conditional (disable_default): 'disable_default' is undefined\n\nThe error appears to be in '/home/assistent/Desktop/ansible/install_web.yml': line 31, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Disable default Apache site\n      ^ here\n"}
+2024-01-14 18:02:54,423 p=96802 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 18:02:54,428 p=96802 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:02:54,428 p=96802 u=assistent n=ansible | app1                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:02:54,428 p=96802 u=assistent n=ansible | app2                       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:02:54,429 p=96802 u=assistent n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:02:58,814 p=97068 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:02:58,861 p=97068 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:03:01,417 p=97068 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:03:01,482 p=97068 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:03:01,841 p=97068 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:03:01,883 p=97068 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 18:03:04,991 p=97068 u=assistent n=ansible | fatal: [app1]: FAILED! => {"cache_update_time": 1705065133, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"      install 'apache2'' failed: E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?\n", "rc": 100, "stderr": "E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?\n", "stderr_lines": ["E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?"], "stdout": "", "stdout_lines": []}
+2024-01-14 18:03:05,014 p=97068 u=assistent n=ansible | fatal: [app2]: FAILED! => {"cache_update_time": 1705065133, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"      install 'apache2'' failed: E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?\n", "rc": 100, "stderr": "E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?\n", "stderr_lines": ["E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?"], "stdout": "", "stdout_lines": []}
+2024-01-14 18:03:05,463 p=97068 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:03:05,511 p=97068 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 18:03:06,163 p=97068 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:03:06,220 p=97068 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 18:03:07,206 p=97068 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:03:07,235 p=97068 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 18:03:07,963 p=97068 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:03:08,009 p=97068 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 18:03:08,679 p=97068 u=assistent n=ansible |  [ERROR]: User interrupted execution
+
+2024-01-14 18:03:21,445 p=97353 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:03:21,496 p=97353 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:03:22,744 p=97353 u=assistent n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
+2024-01-14 18:03:22,841 p=97353 u=assistent n=ansible | fatal: [app1]: FAILED! => {"msg": "Missing sudo password"}
+2024-01-14 18:03:22,843 p=97353 u=assistent n=ansible | fatal: [app2]: FAILED! => {"msg": "Missing sudo password"}
+2024-01-14 18:03:22,849 p=97353 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:03:22,850 p=97353 u=assistent n=ansible | app1                       : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:03:22,850 p=97353 u=assistent n=ansible | app2                       : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:03:22,850 p=97353 u=assistent n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:04:36,691 p=97446 u=assistent n=ansible | ERROR! conflicting action statements: apt, sudo
+
+The error appears to be in '/home/assistent/Desktop/ansible/install_web.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: install apache2 package
+      ^ here
+
+2024-01-14 18:05:55,168 p=97540 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:05:55,215 p=97540 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:05:57,426 p=97540 u=assistent n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: setup\n"}
+2024-01-14 18:05:57,427 p=97540 u=assistent n=ansible | fatal: [app1]: FAILED! => {"msg": "Missing sudo password"}
+2024-01-14 18:05:57,428 p=97540 u=assistent n=ansible | fatal: [app2]: FAILED! => {"msg": "Missing sudo password"}
+2024-01-14 18:05:57,430 p=97540 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:05:57,431 p=97540 u=assistent n=ansible | app1                       : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:05:57,431 p=97540 u=assistent n=ansible | app2                       : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:05:57,431 p=97540 u=assistent n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:07:16,230 p=97689 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:07:16,281 p=97689 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:07:19,542 p=97689 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:07:19,595 p=97689 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:07:20,925 p=97689 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:07:20,974 p=97689 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 18:07:26,356 p=97689 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:16:02,360 p=97689 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:16:56,704 p=97689 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:16:56,742 p=97689 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 18:16:58,070 p=97689 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:16:58,080 p=97689 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:16:58,223 p=97689 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:16:58,262 p=97689 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 18:17:01,089 p=97689 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:17:01,352 p=97689 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:17:01,400 p=97689 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:17:01,453 p=97689 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 18:17:03,423 p=97689 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:17:03,621 p=97689 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:17:03,795 p=97689 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:17:03,834 p=97689 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 18:17:05,112 p=97689 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:17:05,151 p=97689 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:17:05,333 p=97689 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:17:05,376 p=97689 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 18:17:05,611 p=97689 u=assistent n=ansible | fatal: [localhost]: FAILED! => {"msg": "The conditional check 'disable_default' failed. The error was: error while evaluating conditional (disable_default): 'disable_default' is undefined\n\nThe error appears to be in '/home/assistent/Desktop/ansible/install_web.yml': line 32, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Disable default Apache site\n      ^ here\n"}
+2024-01-14 18:17:05,721 p=97689 u=assistent n=ansible | fatal: [app1]: FAILED! => {"msg": "The conditional check 'disable_default' failed. The error was: error while evaluating conditional (disable_default): 'disable_default' is undefined\n\nThe error appears to be in '/home/assistent/Desktop/ansible/install_web.yml': line 32, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Disable default Apache site\n      ^ here\n"}
+2024-01-14 18:17:05,767 p=97689 u=assistent n=ansible | fatal: [app2]: FAILED! => {"msg": "The conditional check 'disable_default' failed. The error was: error while evaluating conditional (disable_default): 'disable_default' is undefined\n\nThe error appears to be in '/home/assistent/Desktop/ansible/install_web.yml': line 32, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Disable default Apache site\n      ^ here\n"}
+2024-01-14 18:17:05,769 p=97689 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 18:17:05,774 p=97689 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:17:05,774 p=97689 u=assistent n=ansible | app1                       : ok=6    changed=5    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:17:05,774 p=97689 u=assistent n=ansible | app2                       : ok=6    changed=5    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:17:05,774 p=97689 u=assistent n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:32:55,570 p=98612 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:32:55,616 p=98612 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:32:58,349 p=98612 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:32:58,419 p=98612 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:32:58,590 p=98612 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:32:58,634 p=98612 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 18:33:01,585 p=98612 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:33:01,632 p=98612 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:33:02,421 p=98612 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:33:02,463 p=98612 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 18:33:03,562 p=98612 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:33:03,566 p=98612 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:33:03,637 p=98612 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:33:03,683 p=98612 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 18:33:05,321 p=98612 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:33:07,100 p=98612 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:33:07,186 p=98612 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:33:07,233 p=98612 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 18:33:08,776 p=98612 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:33:08,826 p=98612 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:33:08,938 p=98612 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:33:08,981 p=98612 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 18:33:10,090 p=98612 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:33:10,097 p=98612 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:33:10,231 p=98612 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:33:10,267 p=98612 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 18:33:11,048 p=98612 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:33:11,165 p=98612 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:33:11,240 p=98612 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:33:11,242 p=98612 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 18:33:13,309 p=98612 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:33:13,336 p=98612 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:33:13,406 p=98612 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:33:13,412 p=98612 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:33:13,413 p=98612 u=assistent n=ansible | app1                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:33:13,413 p=98612 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:33:13,414 p=98612 u=assistent n=ansible | localhost                  : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:55:37,829 p=99588 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:55:37,873 p=99588 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:55:40,335 p=99588 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:55:40,445 p=99588 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:55:40,765 p=99588 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:55:40,809 p=99588 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 18:55:43,765 p=99588 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:55:43,776 p=99588 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:55:44,685 p=99588 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:55:44,727 p=99588 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 18:55:45,798 p=99588 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:55:45,865 p=99588 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:55:45,944 p=99588 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:55:45,991 p=99588 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 18:55:47,777 p=99588 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:55:47,845 p=99588 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:55:48,017 p=99588 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:55:48,060 p=99588 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 18:55:49,495 p=99588 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:55:49,632 p=99588 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:55:49,725 p=99588 u=assistent n=ansible | ok: [localhost]
+2024-01-14 18:55:49,772 p=99588 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 18:55:50,942 p=99588 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:55:50,949 p=99588 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:55:50,960 p=99588 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:55:50,998 p=99588 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 18:55:51,754 p=99588 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:55:51,883 p=99588 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:55:51,950 p=99588 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:55:51,951 p=99588 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 18:55:54,119 p=99588 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:55:54,148 p=99588 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:55:54,225 p=99588 u=assistent n=ansible | changed: [localhost]
+2024-01-14 18:55:54,232 p=99588 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:55:54,232 p=99588 u=assistent n=ansible | app1                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:55:54,233 p=99588 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:55:54,233 p=99588 u=assistent n=ansible | localhost                  : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:58:19,699 p=100217 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 18:58:19,743 p=100217 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 18:58:22,752 p=100217 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:58:22,797 p=100217 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:58:22,845 p=100217 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 18:58:25,756 p=100217 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:58:25,782 p=100217 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:58:25,834 p=100217 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 18:58:26,832 p=100217 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:58:26,837 p=100217 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:58:26,884 p=100217 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 18:58:28,438 p=100217 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:58:28,508 p=100217 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:58:28,549 p=100217 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 18:58:29,822 p=100217 u=assistent n=ansible | ok: [app1]
+2024-01-14 18:58:29,900 p=100217 u=assistent n=ansible | ok: [app2]
+2024-01-14 18:58:29,949 p=100217 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 18:58:30,990 p=100217 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:58:30,995 p=100217 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:58:31,043 p=100217 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 18:58:31,721 p=100217 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:58:31,765 p=100217 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:58:31,770 p=100217 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 18:58:33,573 p=100217 u=assistent n=ansible | changed: [app1]
+2024-01-14 18:58:33,645 p=100217 u=assistent n=ansible | changed: [app2]
+2024-01-14 18:58:33,654 p=100217 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 18:58:33,654 p=100217 u=assistent n=ansible | app1                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 18:58:33,655 p=100217 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 19:03:55,491 p=100498 u=assistent n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2024-01-14 19:03:56,090 p=100498 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 19:03:56,132 p=100498 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 19:03:59,108 p=100498 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:03:59,201 p=100498 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:03:59,233 p=100498 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 19:04:02,066 p=100498 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:04:02,070 p=100498 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:04:02,108 p=100498 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 19:04:03,084 p=100498 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:04:03,093 p=100498 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:04:03,141 p=100498 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 19:04:04,779 p=100498 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:04:04,787 p=100498 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:04:04,846 p=100498 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 19:04:06,098 p=100498 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:04:06,194 p=100498 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:04:06,248 p=100498 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 19:04:07,358 p=100498 u=assistent n=ansible | changed: [app1]
+2024-01-14 19:04:07,382 p=100498 u=assistent n=ansible | changed: [app2]
+2024-01-14 19:04:07,419 p=100498 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 19:04:08,095 p=100498 u=assistent n=ansible | changed: [app1]
+2024-01-14 19:04:08,156 p=100498 u=assistent n=ansible | changed: [app2]
+2024-01-14 19:04:08,158 p=100498 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 19:04:10,691 p=100498 u=assistent n=ansible | changed: [app1]
+2024-01-14 19:04:10,724 p=100498 u=assistent n=ansible | changed: [app2]
+2024-01-14 19:04:10,741 p=100498 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 19:04:10,742 p=100498 u=assistent n=ansible | app1                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 19:04:10,742 p=100498 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 19:05:00,523 p=100735 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 19:05:00,574 p=100735 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 19:05:02,647 p=100735 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:05:02,765 p=100735 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:05:02,807 p=100735 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 19:05:05,488 p=100735 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:05:05,677 p=100735 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:05:05,753 p=100735 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 19:05:06,943 p=100735 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:05:06,964 p=100735 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:05:07,002 p=100735 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 19:05:08,537 p=100735 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:05:08,619 p=100735 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:05:08,655 p=100735 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 19:05:09,842 p=100735 u=assistent n=ansible | ok: [app1]
+2024-01-14 19:05:09,918 p=100735 u=assistent n=ansible | ok: [app2]
+2024-01-14 19:05:09,960 p=100735 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 19:05:10,990 p=100735 u=assistent n=ansible | changed: [app2]
+2024-01-14 19:05:11,032 p=100735 u=assistent n=ansible | changed: [app1]
+2024-01-14 19:05:11,070 p=100735 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 19:05:11,814 p=100735 u=assistent n=ansible | changed: [app1]
+2024-01-14 19:05:11,838 p=100735 u=assistent n=ansible | changed: [app2]
+2024-01-14 19:05:11,843 p=100735 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 19:05:14,089 p=100735 u=assistent n=ansible | changed: [app2]
+2024-01-14 19:05:14,684 p=100735 u=assistent n=ansible | changed: [app1]
+2024-01-14 19:05:14,690 p=100735 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 19:05:14,691 p=100735 u=assistent n=ansible | app1                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 19:05:14,691 p=100735 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 21:23:38,955 p=107445 u=assistent n=ansible |  [ERROR]: User interrupted execution
+
+2024-01-14 21:23:48,885 p=107473 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 21:23:48,934 p=107473 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 21:23:52,031 p=107473 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:23:52,111 p=107473 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:23:52,179 p=107473 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 21:23:55,039 p=107473 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:23:55,044 p=107473 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:23:55,092 p=107473 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 21:23:56,150 p=107473 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:23:56,156 p=107473 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:23:56,216 p=107473 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 21:23:57,807 p=107473 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:23:57,882 p=107473 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:23:57,924 p=107473 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 21:23:59,165 p=107473 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:23:59,250 p=107473 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:23:59,289 p=107473 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 21:24:00,415 p=107473 u=assistent n=ansible | changed: [app2]
+2024-01-14 21:24:00,421 p=107473 u=assistent n=ansible | changed: [app1]
+2024-01-14 21:24:00,467 p=107473 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 21:24:01,177 p=107473 u=assistent n=ansible | changed: [app2]
+2024-01-14 21:24:01,209 p=107473 u=assistent n=ansible | changed: [app1]
+2024-01-14 21:24:01,216 p=107473 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 21:24:03,086 p=107473 u=assistent n=ansible | fatal: [app1]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details.\n"}
+2024-01-14 21:24:03,146 p=107473 u=assistent n=ansible | changed: [app2]
+2024-01-14 21:24:03,147 p=107473 u=assistent n=ansible | NO MORE HOSTS LEFT *************************************************************
+2024-01-14 21:24:03,153 p=107473 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 21:24:03,154 p=107473 u=assistent n=ansible | app1                       : ok=7    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-14 21:24:03,154 p=107473 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 21:24:29,598 p=107682 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-14 21:24:29,626 p=107682 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 21:24:31,910 p=107682 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:24:31,999 p=107682 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:24:32,038 p=107682 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-14 21:24:34,797 p=107682 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:24:34,893 p=107682 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:24:34,981 p=107682 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 21:24:36,246 p=107682 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:24:36,261 p=107682 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:24:36,309 p=107682 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 21:24:37,881 p=107682 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:24:37,960 p=107682 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:24:37,998 p=107682 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-14 21:24:39,213 p=107682 u=assistent n=ansible | ok: [app1]
+2024-01-14 21:24:39,291 p=107682 u=assistent n=ansible | ok: [app2]
+2024-01-14 21:24:39,341 p=107682 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 21:24:40,354 p=107682 u=assistent n=ansible | changed: [app1]
+2024-01-14 21:24:40,400 p=107682 u=assistent n=ansible | changed: [app2]
+2024-01-14 21:24:40,441 p=107682 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-14 21:24:41,130 p=107682 u=assistent n=ansible | changed: [app1]
+2024-01-14 21:24:41,199 p=107682 u=assistent n=ansible | changed: [app2]
+2024-01-14 21:24:41,202 p=107682 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-14 21:24:43,076 p=107682 u=assistent n=ansible | changed: [app1]
+2024-01-14 21:24:43,165 p=107682 u=assistent n=ansible | changed: [app2]
+2024-01-14 21:24:43,171 p=107682 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 21:24:43,172 p=107682 u=assistent n=ansible | app1                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 21:24:43,172 p=107682 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 21:27:23,447 p=108055 u=assistent n=ansible | PLAY [install nginx] ***********************************************************
+2024-01-14 21:27:23,495 p=108055 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 21:27:25,653 p=108055 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:27:25,695 p=108055 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-14 21:29:43,376 p=108055 u=assistent n=ansible | changed: [lb]
+2024-01-14 21:29:43,421 p=108055 u=assistent n=ansible | TASK [start nginx] *************************************************************
+2024-01-14 21:29:44,776 p=108055 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:29:44,823 p=108055 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 21:29:45,605 p=108055 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:29:45,640 p=108055 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 21:29:46,837 p=108055 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:29:46,893 p=108055 u=assistent n=ansible | TASK [Set up configuration] ****************************************************
+2024-01-14 21:29:48,059 p=108055 u=assistent n=ansible | changed: [lb]
+2024-01-14 21:29:48,110 p=108055 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 21:29:48,529 p=108055 u=assistent n=ansible | changed: [lb]
+2024-01-14 21:29:48,530 p=108055 u=assistent n=ansible | RUNNING HANDLER [Reload nginx] *************************************************
+2024-01-14 21:29:49,324 p=108055 u=assistent n=ansible | changed: [lb]
+2024-01-14 21:29:49,329 p=108055 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 21:29:49,330 p=108055 u=assistent n=ansible | lb                         : ok=8    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-14 21:39:28,127 p=109575 u=assistent n=ansible | PLAY [install nginx] ***********************************************************
+2024-01-14 21:39:28,175 p=109575 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-14 21:39:30,271 p=109575 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:39:30,301 p=109575 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-14 21:39:33,073 p=109575 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:39:33,118 p=109575 u=assistent n=ansible | TASK [start nginx] *************************************************************
+2024-01-14 21:39:34,440 p=109575 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:39:34,486 p=109575 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-14 21:39:35,220 p=109575 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:39:35,260 p=109575 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-14 21:39:36,405 p=109575 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:39:36,449 p=109575 u=assistent n=ansible | TASK [Set up configuration] ****************************************************
+2024-01-14 21:39:37,274 p=109575 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:39:37,317 p=109575 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-14 21:39:37,724 p=109575 u=assistent n=ansible | ok: [lb]
+2024-01-14 21:39:37,768 p=109575 u=assistent n=ansible | TASK [Disable default Nginx site] **********************************************
+2024-01-14 21:39:38,181 p=109575 u=assistent n=ansible | changed: [lb]
+2024-01-14 21:39:38,182 p=109575 u=assistent n=ansible | RUNNING HANDLER [Reload nginx] *************************************************
+2024-01-14 21:39:38,982 p=109575 u=assistent n=ansible | changed: [lb]
+2024-01-14 21:39:38,987 p=109575 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-14 21:39:38,987 p=109575 u=assistent n=ansible | lb                         : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 00:58:08,276 p=3591 u=assistent n=ansible | lb | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 00:58:10,037 p=3591 u=assistent n=ansible | app2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.31.125 port 22: No route to host",
+    "unreachable": true
+}
+2024-01-16 00:58:10,044 p=3591 u=assistent n=ansible | app1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.31.126 port 22: No route to host",
+    "unreachable": true
+}
+2024-01-16 00:58:50,884 p=3728 u=assistent n=ansible | lb | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 00:58:50,974 p=3728 u=assistent n=ansible | app1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 00:58:51,050 p=3728 u=assistent n=ansible | app2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 02:05:52,467 p=4566 u=assistent n=ansible | app1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 02:05:52,499 p=4566 u=assistent n=ansible | lb | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 02:05:52,534 p=4566 u=assistent n=ansible | app2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 02:08:27,330 p=4663 u=assistent n=ansible | [WARNING]: Unable to parse /home/assistent/Desktop/ansible/hosts as an
+inventory source
+
+2024-01-16 02:08:27,331 p=4663 u=assistent n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-01-16 02:08:27,331 p=4663 u=assistent n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2024-01-16 02:10:09,598 p=4787 u=assistent n=ansible | lb | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 02:10:09,602 p=4787 u=assistent n=ansible | app1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 02:10:09,642 p=4787 u=assistent n=ansible | app2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-16 02:15:26,648 p=4922 u=assistent n=ansible | PLAY [ping] ********************************************************************
+2024-01-16 02:15:26,706 p=4922 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 02:15:30,432 p=4922 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:15:30,457 p=4922 u=assistent n=ansible | ok: [lb]
+2024-01-16 02:15:30,594 p=4922 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:15:30,622 p=4922 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-16 02:15:31,536 p=4922 u=assistent n=ansible | ok: [lb]
+2024-01-16 02:15:31,568 p=4922 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:15:31,569 p=4922 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:15:31,578 p=4922 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 02:15:31,579 p=4922 u=assistent n=ansible | app1                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:15:31,579 p=4922 u=assistent n=ansible | app2                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:15:31,579 p=4922 u=assistent n=ansible | lb                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:16:09,395 p=5035 u=assistent n=ansible | PLAY [ping] ********************************************************************
+2024-01-16 02:16:09,425 p=5035 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 02:16:11,618 p=5035 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:16:11,763 p=5035 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:16:11,948 p=5035 u=assistent n=ansible | ok: [lb]
+2024-01-16 02:16:11,976 p=5035 u=assistent n=ansible | TASK [ping] ********************************************************************
+2024-01-16 02:16:13,097 p=5035 u=assistent n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: Exception: boom
+2024-01-16 02:16:13,098 p=5035 u=assistent n=ansible | fatal: [app2]: FAILED! => {"changed": false, "module_stderr": "Shared connection to 192.168.31.128 closed.\r\n", "module_stdout": "Traceback (most recent call last):\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.1056538-36986583682743/AnsiballZ_ping.py\", line 102, in <module>\r\n    _ansiballz_main()\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.1056538-36986583682743/AnsiballZ_ping.py\", line 94, in _ansiballz_main\r\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.1056538-36986583682743/AnsiballZ_ping.py\", line 40, in invoke_module\r\n    runpy.run_module(mod_name='ansible.modules.system.ping', init_globals=None, run_name='__main__', alter_sys=True)\r\n  File \"/usr/lib/python3.8/runpy.py\", line 207, in run_module\r\n    return _run_module_code(code, init_globals, run_name, mod_spec)\r\n  File \"/usr/lib/python3.8/runpy.py\", line 97, in _run_module_code\r\n    _run_code(code, mod_globals, init_globals,\r\n  File \"/usr/lib/python3.8/runpy.py\", line 87, in _run_code\r\n    exec(code, run_globals)\r\n  File \"/tmp/ansible_ping_payload_jqxpwmf6/ansible_ping_payload.zip/ansible/modules/system/ping.py\", line 85, in <module>\r\n  File \"/tmp/ansible_ping_payload_jqxpwmf6/ansible_ping_payload.zip/ansible/modules/system/ping.py\", line 75, in main\r\nException: boom\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-01-16 02:16:13,130 p=5035 u=assistent n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: Exception: boom
+2024-01-16 02:16:13,131 p=5035 u=assistent n=ansible | fatal: [lb]: FAILED! => {"changed": false, "module_stderr": "Shared connection to 192.168.31.84 closed.\r\n", "module_stdout": "Traceback (most recent call last):\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.0158992-10318950940615/AnsiballZ_ping.py\", line 102, in <module>\r\n    _ansiballz_main()\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.0158992-10318950940615/AnsiballZ_ping.py\", line 94, in _ansiballz_main\r\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.0158992-10318950940615/AnsiballZ_ping.py\", line 40, in invoke_module\r\n    runpy.run_module(mod_name='ansible.modules.system.ping', init_globals=None, run_name='__main__', alter_sys=True)\r\n  File \"/usr/lib/python3.8/runpy.py\", line 207, in run_module\r\n    return _run_module_code(code, init_globals, run_name, mod_spec)\r\n  File \"/usr/lib/python3.8/runpy.py\", line 97, in _run_module_code\r\n    _run_code(code, mod_globals, init_globals,\r\n  File \"/usr/lib/python3.8/runpy.py\", line 87, in _run_code\r\n    exec(code, run_globals)\r\n  File \"/tmp/ansible_ping_payload_8ljssh34/ansible_ping_payload.zip/ansible/modules/system/ping.py\", line 85, in <module>\r\n  File \"/tmp/ansible_ping_payload_8ljssh34/ansible_ping_payload.zip/ansible/modules/system/ping.py\", line 75, in main\r\nException: boom\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-01-16 02:16:13,169 p=5035 u=assistent n=ansible | fatal: [app1]: FAILED! => {"changed": false, "module_stderr": "Shared connection to 192.168.31.127 closed.\r\n", "module_stdout": "\r\nTraceback (most recent call last):\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.0609403-206112739149059/AnsiballZ_ping.py\", line 102, in <module>\r\n    _ansiballz_main()\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.0609403-206112739149059/AnsiballZ_ping.py\", line 94, in _ansiballz_main\r\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\r\n  File \"/home/assistent/.ansible/tmp/ansible-tmp-1705356972.0609403-206112739149059/AnsiballZ_ping.py\", line 40, in invoke_module\r\n    runpy.run_module(mod_name='ansible.modules.system.ping', init_globals=None, run_name='__main__', alter_sys=True)\r\n  File \"/usr/lib/python3.8/runpy.py\", line 207, in run_module\r\n    return _run_module_code(code, init_globals, run_name, mod_spec)\r\n  File \"/usr/lib/python3.8/runpy.py\", line 97, in _run_module_code\r\n    _run_code(code, mod_globals, init_globals,\r\n  File \"/usr/lib/python3.8/runpy.py\", line 87, in _run_code\r\n    exec(code, run_globals)\r\n  File \"/tmp/ansible_ping_payload_bptjg9hm/ansible_ping_payload.zip/ansible/modules/system/ping.py\", line 85, in <module>\r\n  File \"/tmp/ansible_ping_payload_bptjg9hm/ansible_ping_payload.zip/ansible/modules/system/ping.py\", line 75, in main\r\nException: boom\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-01-16 02:16:13,176 p=5035 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 02:16:13,178 p=5035 u=assistent n=ansible | app1                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:16:13,179 p=5035 u=assistent n=ansible | app2                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:16:13,180 p=5035 u=assistent n=ansible | lb                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:16:57,590 p=5151 u=assistent n=ansible | [WARNING]: Unable to parse /home/assistent/Desktop/ansible/host as an inventory
+source
+
+2024-01-16 02:16:57,591 p=5151 u=assistent n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-01-16 02:16:57,592 p=5151 u=assistent n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2024-01-16 02:16:58,040 p=5151 u=assistent n=ansible | PLAY [ping] ********************************************************************
+2024-01-16 02:16:58,040 p=5151 u=assistent n=ansible | skipping: no hosts matched
+2024-01-16 02:16:58,040 p=5151 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 02:20:23,064 p=5245 u=assistent n=ansible | [WARNING]: Unable to parse /home/assistent/Desktop/ansible/host as an inventory
+source
+
+2024-01-16 02:20:23,064 p=5245 u=assistent n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-01-16 02:20:23,065 p=5245 u=assistent n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2024-01-16 02:20:23,543 p=5245 u=assistent n=ansible | PLAY [ping] ********************************************************************
+2024-01-16 02:20:23,543 p=5245 u=assistent n=ansible | skipping: no hosts matched
+2024-01-16 02:20:23,543 p=5245 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 02:20:55,679 p=5294 u=assistent n=ansible | PLAY [ping] ********************************************************************
+2024-01-16 02:20:55,703 p=5294 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 02:20:58,707 p=5294 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:20:59,710 p=5294 u=assistent n=ansible | ok: [lb]
+2024-01-16 02:20:59,740 p=5294 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:20:59,771 p=5294 u=assistent n=ansible | TASK [ping] ********************************************************************
+2024-01-16 02:21:00,736 p=5294 u=assistent n=ansible | ok: [lb]
+2024-01-16 02:21:00,743 p=5294 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:21:00,755 p=5294 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:21:00,762 p=5294 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 02:21:00,762 p=5294 u=assistent n=ansible | app1                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:21:00,763 p=5294 u=assistent n=ansible | app2                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:21:00,763 p=5294 u=assistent n=ansible | lb                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:42:26,726 p=5445 u=assistent n=ansible | PLAY [install web app] *********************************************************
+2024-01-16 02:42:26,760 p=5445 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 02:42:29,409 p=5445 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:42:29,521 p=5445 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:42:29,552 p=5445 u=assistent n=ansible | TASK [install apache2 package] *************************************************
+2024-01-16 02:42:32,534 p=5445 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:42:32,565 p=5445 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:42:32,599 p=5445 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-16 02:42:33,575 p=5445 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:42:33,628 p=5445 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:42:33,887 p=5445 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-16 02:42:36,316 p=5445 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:42:36,351 p=5445 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:42:36,385 p=5445 u=assistent n=ansible | TASK [Set up Apache virtualhost] ***********************************************
+2024-01-16 02:42:37,469 p=5445 u=assistent n=ansible | ok: [app1]
+2024-01-16 02:42:37,548 p=5445 u=assistent n=ansible | ok: [app2]
+2024-01-16 02:42:37,584 p=5445 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-16 02:42:38,588 p=5445 u=assistent n=ansible | changed: [app1]
+2024-01-16 02:42:38,590 p=5445 u=assistent n=ansible | changed: [app2]
+2024-01-16 02:42:38,630 p=5445 u=assistent n=ansible | TASK [Disable default Apache site] *********************************************
+2024-01-16 02:42:39,244 p=5445 u=assistent n=ansible | changed: [app1]
+2024-01-16 02:42:39,315 p=5445 u=assistent n=ansible | changed: [app2]
+2024-01-16 02:42:39,316 p=5445 u=assistent n=ansible | RUNNING HANDLER [Reload Apache] ************************************************
+2024-01-16 02:42:40,883 p=5445 u=assistent n=ansible | changed: [app2]
+2024-01-16 02:42:40,944 p=5445 u=assistent n=ansible | changed: [app1]
+2024-01-16 02:42:40,950 p=5445 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 02:42:40,951 p=5445 u=assistent n=ansible | app1                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 02:42:40,952 p=5445 u=assistent n=ansible | app2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 03:03:27,610 p=6035 u=assistent n=ansible | PLAY [install nginx] ***********************************************************
+2024-01-16 03:03:27,631 p=6035 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 03:03:32,846 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:32,875 p=6035 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-16 03:03:36,031 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:36,060 p=6035 u=assistent n=ansible | TASK [start nginx] *************************************************************
+2024-01-16 03:03:37,469 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:37,491 p=6035 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-16 03:03:38,288 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:38,311 p=6035 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-16 03:03:39,639 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:39,669 p=6035 u=assistent n=ansible | TASK [Set up configuration] ****************************************************
+2024-01-16 03:03:40,607 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:40,634 p=6035 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-16 03:03:41,107 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:41,136 p=6035 u=assistent n=ansible | TASK [Disable default Nginx site] **********************************************
+2024-01-16 03:03:41,633 p=6035 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:03:41,636 p=6035 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 03:03:41,637 p=6035 u=assistent n=ansible | lb                         : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 03:08:03,974 p=6198 u=assistent n=ansible | PLAY [install nginx] ***********************************************************
+2024-01-16 03:08:03,995 p=6198 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 03:08:07,521 p=6198 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:08:07,544 p=6198 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-16 03:08:10,512 p=6198 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:08:10,540 p=6198 u=assistent n=ansible | TASK [start nginx] *************************************************************
+2024-01-16 03:08:11,828 p=6198 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:08:11,862 p=6198 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-16 03:08:12,639 p=6198 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:08:12,674 p=6198 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-16 03:08:13,860 p=6198 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:08:13,881 p=6198 u=assistent n=ansible | TASK [Set up configuration] ****************************************************
+2024-01-16 03:08:16,747 p=6198 u=assistent n=ansible | changed: [lb]
+2024-01-16 03:08:16,795 p=6198 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-16 03:08:17,309 p=6198 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:08:17,327 p=6198 u=assistent n=ansible | TASK [Disable default Nginx site] **********************************************
+2024-01-16 03:08:17,860 p=6198 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:08:17,866 p=6198 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 03:08:17,866 p=6198 u=assistent n=ansible | lb                         : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 03:11:49,345 p=6323 u=assistent n=ansible | PLAY [install nginx] ***********************************************************
+2024-01-16 03:11:49,369 p=6323 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 03:11:51,919 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:11:51,947 p=6323 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-16 03:11:55,376 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:11:55,401 p=6323 u=assistent n=ansible | TASK [start nginx] *************************************************************
+2024-01-16 03:11:57,015 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:11:57,034 p=6323 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-16 03:11:57,901 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:11:57,930 p=6323 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-16 03:11:59,341 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:11:59,372 p=6323 u=assistent n=ansible | TASK [Set up configuration] ****************************************************
+2024-01-16 03:12:00,342 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:12:00,368 p=6323 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-16 03:12:00,867 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:12:00,898 p=6323 u=assistent n=ansible | TASK [Disable default Nginx site] **********************************************
+2024-01-16 03:12:01,399 p=6323 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:12:01,403 p=6323 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 03:12:01,403 p=6323 u=assistent n=ansible | lb                         : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 03:15:05,759 p=6478 u=assistent n=ansible | PLAY [install nginx] ***********************************************************
+2024-01-16 03:15:05,787 p=6478 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 03:15:08,970 p=6478 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:09,015 p=6478 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-16 03:15:12,451 p=6478 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:12,473 p=6478 u=assistent n=ansible | TASK [start nginx] *************************************************************
+2024-01-16 03:15:13,777 p=6478 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:13,800 p=6478 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-16 03:15:14,556 p=6478 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:14,581 p=6478 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-16 03:15:15,747 p=6478 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:15,765 p=6478 u=assistent n=ansible | TASK [Set up configuration] ****************************************************
+2024-01-16 03:15:17,028 p=6478 u=assistent n=ansible | changed: [lb]
+2024-01-16 03:15:17,055 p=6478 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-16 03:15:17,533 p=6478 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:17,553 p=6478 u=assistent n=ansible | TASK [Disable default Nginx site] **********************************************
+2024-01-16 03:15:18,033 p=6478 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:18,036 p=6478 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 03:15:18,037 p=6478 u=assistent n=ansible | lb                         : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-16 03:15:30,850 p=6591 u=assistent n=ansible | PLAY [install nginx] ***********************************************************
+2024-01-16 03:15:30,873 p=6591 u=assistent n=ansible | TASK [Gathering Facts] *********************************************************
+2024-01-16 03:15:32,612 p=6591 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:32,648 p=6591 u=assistent n=ansible | TASK [install nginx package] ***************************************************
+2024-01-16 03:15:35,037 p=6591 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:35,065 p=6591 u=assistent n=ansible | TASK [start nginx] *************************************************************
+2024-01-16 03:15:36,597 p=6591 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:36,619 p=6591 u=assistent n=ansible | TASK [Create document root] ****************************************************
+2024-01-16 03:15:37,414 p=6591 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:37,434 p=6591 u=assistent n=ansible | TASK [Copy index test page] ****************************************************
+2024-01-16 03:15:38,560 p=6591 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:38,587 p=6591 u=assistent n=ansible | TASK [Set up configuration] ****************************************************
+2024-01-16 03:15:40,062 p=6591 u=assistent n=ansible | changed: [lb]
+2024-01-16 03:15:40,095 p=6591 u=assistent n=ansible | TASK [Enable new site] *********************************************************
+2024-01-16 03:15:40,668 p=6591 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:40,689 p=6591 u=assistent n=ansible | TASK [Disable default Nginx site] **********************************************
+2024-01-16 03:15:41,170 p=6591 u=assistent n=ansible | ok: [lb]
+2024-01-16 03:15:41,171 p=6591 u=assistent n=ansible | RUNNING HANDLER [Reload nginx] *************************************************
+2024-01-16 03:15:44,522 p=6591 u=assistent n=ansible | changed: [lb]
+2024-01-16 03:15:44,531 p=6591 u=assistent n=ansible | PLAY RECAP *********************************************************************
+2024-01-16 03:15:44,534 p=6591 u=assistent n=ansible | lb                         : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

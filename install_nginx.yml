@@ -1,0 +1,46 @@
+---
+- name: install nginx
+  hosts: lbs
+  remote_user: assistent
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: install nginx package
+      apt:
+        name: nginx
+        state: latest
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+    - name: Create document root
+      file:
+        path: "/var/www/maksim-kozlov"
+        state: directory
+        mode: '0755'
+    - name: Copy index test page
+      template:
+        src: "files/index.html"
+        dest: "/var/www/maksim-kozlov/index.html"
+    - name: Set up configuration
+      template:
+        src: "files/nginx-maksim-kozlov"
+        dest: "/etc/nginx/sites-available/nginx-maksim-kozlov"
+      notify: Reload nginx
+    - name: Enable new site
+      file:
+        src: "/etc/nginx/sites-available/nginx-maksim-kozlov"
+        dest: "/etc/nginx/sites-enabled/nginx-maksim-kozlov"
+        state: link
+      notify: Reload nginx
+    - name: Disable default Nginx site
+      file:
+        path: "/etc/nginx/sites-enabled/default"
+        state: absent
+      notify: Reload nginx
+  handlers:
+    - name: Reload nginx
+      service:
+        name: nginx
+        state: reloaded

@@ -1,0 +1,42 @@
+---
+- name: install web app
+  hosts: apps
+  remote_user: assistent
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: install apache2 package
+      apt:
+        name: apache2
+        state: latest
+
+    - name: Create document root
+      file:
+        path: "/var/www/maksim-kozlov"
+        state: directory
+        mode: '0755'
+
+    - name: Copy index test page
+      template:
+        src: "files/index.html"
+        dest: "/var/www/maksim-kozlov/index.html"
+
+    - name: Set up Apache virtualhost
+      template:
+        src: "files/maksim-kozlov.conf"
+        dest: "/etc/apache2/sites-available/maksim-kozlov.conf"
+
+    - name: Enable new site
+      shell: /usr/sbin/a2ensite maksim-kozlov.conf
+      notify: Reload Apache
+
+    - name: Disable default Apache site
+      shell: /usr/sbin/a2dissite 000-default.conf
+      notify: Reload Apache
+
+  handlers:
+    - name: Reload Apache
+      service:
+        name: apache2
+        state: reloaded
