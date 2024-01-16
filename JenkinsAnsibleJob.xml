@@ -1,0 +1,95 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?><flow-definition plugin="workflow-job@1385.vb_58b_86ea_fff1">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2168.vf921b_4e72c73"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2168.vf921b_4e72c73">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>5</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3837.v305192405b_c0">
+    <script>pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git branch: 'main', credentialsId: 'jenkins_GIT_plugin', url: 'git@github.com:AssisTENTUtopist/ansible-jenkins.git'
+                
+                sh '''echo "----------Prom Env Build Start----------"
+ls
+cd files
+ls
+echo "----------Prom Env Test End----------"'''
+            }
+        }
+        stage('Upload') {
+            steps {
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'apps', sshCredentials: [encryptedPassphrase: '{AQAAABAAAAAQAEVu7xIKpEa+4MyPEc2nn6H32/x68Gp79QcO1vZmftQ=}', key: '''-----BEGIN OPENSSH PRIVATE KEY-----
+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
+QWN0aW9uCgECAwQF
+-----END OPENSSH PRIVATE KEY-----''', keyPath: '', username: 'assistent'], transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''ls
+cd Desktop/ansible-jenkins
+ansible-playbook install_web.yml 
+ansible-playbook install_nginx.yml ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'ansible-jenkins', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '*/')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
+
+            }
+        }
+    }
+}
+</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
